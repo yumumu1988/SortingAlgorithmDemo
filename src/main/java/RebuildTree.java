@@ -18,6 +18,9 @@ public class RebuildTree {
         }
     }
 
+    /*
+    * 根据前序遍历、中序遍历，得到根节点
+    * */
     private static BinaryTreeNode rebuildTree(int[] preOrder, int preStart, int preEnd, int[] inOrder, int inStart, int inEnd) {
         // 小心数组越界
         if (preOrder == null || inOrder == null || preOrder.length != inOrder.length || preOrder.length < 1 || preStart > preEnd || inStart > inEnd){
@@ -52,7 +55,7 @@ class BinaryTreeNode{
     public BinaryTreeNode() {
     }
 
-    public BinaryTreeNode(int value) {
+    BinaryTreeNode(int value) {
         this.value = value;
     }
 
@@ -74,7 +77,7 @@ class BinaryTreeNode{
         return leftChild;
     }
 
-    public void setLeftChild(BinaryTreeNode leftChild) {
+    void setLeftChild(BinaryTreeNode leftChild) {
         this.leftChild = leftChild;
     }
 
@@ -82,11 +85,11 @@ class BinaryTreeNode{
         return rightChild;
     }
 
-    public void setRightChild(BinaryTreeNode rightChild) {
+    void setRightChild(BinaryTreeNode rightChild) {
         this.rightChild = rightChild;
     }
 
-    public void outPut(){
+    void outPut(){
         postLoop(this);
     }
 
@@ -100,7 +103,7 @@ class BinaryTreeNode{
         System.out.println(binaryTreeNode.value);
     }
 
-    public void outPut(List<Integer> list){
+    void outPut(List<Integer> list){
         postLoop(this, list);
     }
 

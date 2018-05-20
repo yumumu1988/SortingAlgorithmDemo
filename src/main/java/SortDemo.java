@@ -138,7 +138,6 @@ public class SortDemo {
 
         for (int i = 1; i < array.length; i++){
 
-
             int index = i;
 
             for (int j = i - 1; j >= 0; j--){
